@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import Navbar from './Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="map">
+      <Navbar/>
+      <MapContainer center={[52.246501, 21.085599]} zoom={15} scrollWheelZoom={false}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={[52.246501, 21.085599]}>
+          <Popup>
+            <h3>Kobielska 23</h3>
+            An accessible building. <br /> Yay!
+          </Popup>
+        </Marker>
+      </MapContainer>
     </div>
+   
   );
 }
 
