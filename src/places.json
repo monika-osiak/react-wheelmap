@@ -1,0 +1,38 @@
+{
+    "places": [
+        {
+            "name": "Fundacja Avalon",
+            "description": "Siedziba Fundacji Avalon. Miejsce odbywania się zajęć sportowych oraz innych.",
+            "plus_code": "5XMV+GM Warszawa",
+            "country": "PL",
+            "voivodeship": "mazowieckie",
+            "city": "Warszawa",
+            "postal_code": "02-672",
+            "street": "Domaniewska",
+            "number": "50A",
+            "lat": 52.183485,
+            "long": 20.994495,
+            "accessibility": {
+                "key": true,
+                "other_key": false
+            }
+        },
+        {
+            "name": "Galeria Grochów",
+            "description": "Galeria bez barier",
+            "plus_code": null,
+            "country": "PL",
+            "voivodeship": "mazowieckie",
+            "city": "Warszawa",
+            "postal_code": "04-359",
+            "street": "Kobielska",
+            "number": "23",
+            "lat": 52.246501,
+            "long": 21.085599,
+            "accessibility": {
+                "something": false,
+                "something else": true
+            }
+        }
+    ]
+}
