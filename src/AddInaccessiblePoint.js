@@ -2,11 +2,10 @@ import { useState } from "react"
 import { Marker, Popup, useMapEvents } from "react-leaflet"
 
 
-function LocationMarker() {
+function AddInaccessiblePoint() {
     const [position, setPosition] = useState(null)
     const map = useMapEvents({
       click(e) {
-        // map.locate()
         console.log(e.latlng)
         setPosition(e.latlng)
       }
@@ -21,4 +20,4 @@ function LocationMarker() {
     )
   }
 
-export default LocationMarker;
+export default AddInaccessiblePoint;
