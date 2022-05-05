@@ -1,0 +1,34 @@
+{
+    "points": [
+        {
+            "id": 1,
+            "name": "Remont chodnika – ulica Grochowska",
+            "description": "Remont chodnika, uwaga na utrudnienia",
+            "lat": 52.245523,
+            "long": 21.083414,
+            "plus_code": null,
+            "category": "remont",
+            "active": true
+        },
+        {
+            "id": 2,
+            "name": "Niedziałająca winda",
+            "description": "Nie działa winda przy kładce",
+            "lat": 52.244580,
+            "long": 21.090516,
+            "plus_code": null,
+            "category": "awaria",
+            "active": true
+        },
+        {
+            "id": 3,
+            "name": "Kładka bez windy",
+            "description": "Tylko schody",
+            "lat": 52.238156, 
+            "long": 21.080919,
+            "plus_code": null,
+            "category": "na stałe",
+            "active": true
+        }
+    ]
+}
