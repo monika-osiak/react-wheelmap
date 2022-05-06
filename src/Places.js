@@ -3,7 +3,11 @@ import PlaceMarker from "./PlaceMarker";
 const Places = ({ places }) => {
     return ( 
         <div className="places">
-            {places.map(place => (<PlaceMarker place={place} />))}
+            {places.map(place => (
+                <div className="place" key={place.id}>
+                    <PlaceMarker place={place} />
+                </div>
+            ))}
         </div>
     );
 }

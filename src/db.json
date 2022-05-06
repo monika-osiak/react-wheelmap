@@ -33,6 +33,7 @@
     ],
     "places": [
         {
+            "id": 1,
             "name": "Fundacja Avalon",
             "description": "Siedziba Fundacji Avalon. Miejsce odbywania się zajęć sportowych oraz innych.",
             "plus_code": "5XMV+GM Warszawa",
@@ -50,6 +51,7 @@
             }
         },
         {
+            "id": 2,
             "name": "Galeria Grochów",
             "description": "Galeria bez barier",
             "plus_code": null,

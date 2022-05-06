@@ -9,7 +9,11 @@ const PlaceMarker = ({ place }) => {
         <Popup>
             <h3>{place.name}</h3>
             <p>{place.description}</p>
-            {Object.entries(place.accessibility).map((key, value) => (<p>{key}: {value}<br/></p>))}
+            {Object.entries(place.accessibility).map((key, value) => (
+                <div className="accessibility" key={key}>
+                    <p>{key}: {value}<br/></p>
+                </div>
+            ))}
         </Popup>
     </Marker>
   }
