@@ -1,6 +1,8 @@
+import { BrowserRouter as Router, Route, Routes as Switch } from 'react-router-dom';
 import './App.css';
 import Map from './Map';
 import Navbar from './Navbar';
+import NotFound from './NoFound';
 import useFetch from './useFetch';
 
 function App() {
@@ -8,10 +10,15 @@ function App() {
   const { error: errorPlaces, loading: loadingPlaces, data: places } = useFetch('http://localhost:8000/places')
 
   return (
-    <div id="map">
-      <Navbar/>
-      <Map points={points} places={places} />
-    </div>
+    <Router>
+      <div id="app">
+        <Navbar/>
+        <Switch>
+          <Route exact path="/" element={<Map points={points} places={places} />} />
+          <Route path="*" element={<NotFound />}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
