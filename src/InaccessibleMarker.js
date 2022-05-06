@@ -3,7 +3,7 @@ import InaccessibleIcon from "./InaccessibleIcon"
 
 const InaccessibleMarker= ({point}) => {
     return <Marker 
-        position={[point.lat, point.long]} 
+        position={[point.lat, point.lng]} 
         icon={InaccessibleIcon()}
     >
         <Popup>

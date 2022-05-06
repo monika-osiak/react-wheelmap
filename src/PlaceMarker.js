@@ -3,7 +3,7 @@ import PlaceIcon from "./PlaceIcon";
 
 const PlaceMarker = ({ place }) => {
     return <Marker 
-        position={[place.lat, place.long]} 
+        position={[place.lat, place.lng]} 
         icon={PlaceIcon()}
     >
         <Popup>

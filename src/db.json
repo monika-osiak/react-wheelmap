@@ -1,72 +1,96 @@
 {
-    "points": [
-        {
-            "id": 1,
-            "name": "Remont chodnika – ulica Grochowska",
-            "description": "Remont chodnika, uwaga na utrudnienia",
-            "lat": 52.245523,
-            "long": 21.083414,
-            "plus_code": null,
-            "category": "remont",
-            "active": true
-        },
-        {
-            "id": 2,
-            "name": "Niedziałająca winda",
-            "description": "Nie działa winda przy kładce",
-            "lat": 52.244580,
-            "long": 21.090516,
-            "plus_code": null,
-            "category": "awaria",
-            "active": true
-        },
-        {
-            "id": 3,
-            "name": "Kładka bez windy",
-            "description": "Tylko schody",
-            "lat": 52.238156, 
-            "long": 21.080919,
-            "plus_code": null,
-            "category": "na stałe",
-            "active": true
-        }
-    ],
-    "places": [
-        {
-            "id": 1,
-            "name": "Fundacja Avalon",
-            "description": "Siedziba Fundacji Avalon. Miejsce odbywania się zajęć sportowych oraz innych.",
-            "plus_code": "5XMV+GM Warszawa",
-            "country": "PL",
-            "voivodeship": "mazowieckie",
-            "city": "Warszawa",
-            "postal_code": "02-672",
-            "street": "Domaniewska",
-            "number": "50A",
-            "lat": 52.183485,
-            "long": 20.994495,
-            "accessibility": {
-                "key": true,
-                "other_key": false
-            }
-        },
-        {
-            "id": 2,
-            "name": "Galeria Grochów",
-            "description": "Galeria bez barier",
-            "plus_code": null,
-            "country": "PL",
-            "voivodeship": "mazowieckie",
-            "city": "Warszawa",
-            "postal_code": "04-359",
-            "street": "Kobielska",
-            "number": "23",
-            "lat": 52.246501,
-            "long": 21.085599,
-            "accessibility": {
-                "something": false,
-                "something else": true
-            }
-        }
-    ]
+  "points": [
+    {
+      "id": 1,
+      "name": "Remont chodnika – ulica Grochowska",
+      "description": "Remont chodnika, uwaga na utrudnienia",
+      "lat": 52.245523,
+      "lng": 21.083414,
+      "plus_code": null,
+      "category": "remont",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Niedziałająca winda",
+      "description": "Nie działa winda przy kładce",
+      "lat": 52.24458,
+      "lng": 21.090516,
+      "plus_code": null,
+      "category": "awaria",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Kładka bez windy",
+      "description": "Tylko schody",
+      "lat": 52.238156,
+      "lng": 21.080919,
+      "plus_code": null,
+      "category": "na stałe",
+      "active": true
+    },
+    {
+      "lat": "52.25029509949964",
+      "lng": "21.084566116333008",
+      "name": "Skrzyżowanie Wiatracznej z Dwernickiego",
+      "desc": "Remont",
+      "category": "remont",
+      "id": 4
+    },
+    {
+      "lat": "52.23580955623914",
+      "lng": "21.079952716827393",
+      "name": "Przejście pod ulicą",
+      "desc": "Tylko schody i stromy zjazd dla wózków dziecięcych",
+      "category": "na stałe",
+      "id": 5
+    },
+    {
+      "lat": "52.224204572406094",
+      "lng": "21.04358196258545",
+      "name": "Torwar 01",
+      "desc": "Zejście na dół tylko po schodach, brak windy",
+      "category": "na stałe",
+      "id": 6
+    }
+  ],
+  "places": [
+    {
+      "id": 1,
+      "name": "Fundacja Avalon",
+      "description": "Siedziba Fundacji Avalon. Miejsce odbywania się zajęć sportowych oraz innych.",
+      "plus_code": "5XMV+GM Warszawa",
+      "country": "PL",
+      "voivodeship": "mazowieckie",
+      "city": "Warszawa",
+      "postal_code": "02-672",
+      "street": "Domaniewska",
+      "number": "50A",
+      "lat": 52.183485,
+      "lng": 20.994495,
+      "accessibility": {
+        "key": true,
+        "other_key": false
+      }
+    },
+    {
+      "id": 2,
+      "name": "Galeria Grochów",
+      "description": "Galeria bez barier",
+      "plus_code": null,
+      "country": "PL",
+      "voivodeship": "mazowieckie",
+      "city": "Warszawa",
+      "postal_code": "04-359",
+      "street": "Kobielska",
+      "number": "23",
+      "lat": 52.246501,
+      "lng": 21.085599,
+      "accessibility": {
+        "something": false,
+        "something else": true
+      }
+    }
+  ]
 }
