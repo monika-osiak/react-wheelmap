@@ -34,7 +34,7 @@
       "lat": "52.25029509949964",
       "lng": "21.084566116333008",
       "name": "Skrzyżowanie Wiatracznej z Dwernickiego",
-      "desc": "Remont",
+      "description": "Remont",
       "category": "remont",
       "id": 4
     },
@@ -42,7 +42,7 @@
       "lat": "52.23580955623914",
       "lng": "21.079952716827393",
       "name": "Przejście pod ulicą",
-      "desc": "Tylko schody i stromy zjazd dla wózków dziecięcych",
+      "description": "Tylko schody i stromy zjazd dla wózków dziecięcych",
       "category": "na stałe",
       "id": 5
     },
@@ -50,9 +50,17 @@
       "lat": "52.224204572406094",
       "lng": "21.04358196258545",
       "name": "Torwar 01",
-      "desc": "Zejście na dół tylko po schodach, brak windy",
+      "description": "Zejście na dół tylko po schodach, brak windy",
       "category": "na stałe",
       "id": 6
+    },
+    {
+      "lat": "52.24406788078239",
+      "lng": "21.08636856079102",
+      "name": "Zepsuta winda w Galerii Rondo Wiatraczna",
+      "description": "jw.",
+      "category": "awaria",
+      "id": 7
     }
   ],
   "places": [

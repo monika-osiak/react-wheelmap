@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 const AddPoint = () => {
     const { lat, lng } = useParams();
     const [ name, setName ] = useState('');
-    const [ desc, setDesc ] = useState('');
+    const [ description, setDescription ] = useState('');
     const [ category, setCategory ] = useState('inne');
     const [ loading, setLoading ] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const point = { lat, lng, name, desc, category };
+        const point = { lat, lng, name, description, category };
         setLoading(true);
         
         fetch('http://localhost:8000/points', {
@@ -43,8 +43,8 @@ const AddPoint = () => {
                 <label>Opis:</label>
                 <textarea
                     required
-                    value={desc}
-                    onChange={(e) => setDesc(e.target.value)}
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
                 />
                 <label>Kategoria:</label>
                 <select
