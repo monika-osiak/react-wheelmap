@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Marker, Popup, useMapEvents } from "react-leaflet"
+import { Link } from "react-router-dom"
 import Address from "./Address"
 
 
@@ -15,8 +16,8 @@ function HandleClickOnMap() {
       <Marker position={position}>
         <Popup>
             <Address position={position}/>
-            <button>Dodaj miejsce</button>
-            <button>Dodaj punkt</button>
+            <Link to={`/points/${position.lat}/${position.lng}`}>Dodaj punkt</Link>
+            <Link to={`/places/${position.lat}/${position.lng}`}>Dodaj miejsce</Link>
         </Popup>
       </Marker>
     )

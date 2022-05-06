@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes as Switch } from 'react-router-dom';
+import AddPoint from './AddPoint';
+import AddPlace from './AddPlace';
 import './App.css';
 import Map from './Map';
 import Navbar from './Navbar';
@@ -15,6 +17,8 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="/" element={<Map points={points} places={places} />} />
+          <Route path="/points/:lat/:lng" element={<AddPoint/>}/>
+          <Route path="/places/:lat/:lng" element={<AddPlace/>}/>
           <Route path="*" element={<NotFound />}/>
         </Switch>
       </div>
