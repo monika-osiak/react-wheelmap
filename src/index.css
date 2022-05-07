@@ -97,6 +97,7 @@ code {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 40px;
 }
 .create label {
   text-align: left;
@@ -115,11 +116,12 @@ code {
   box-sizing: border-box;
   display: block;
 }
-.create button {
+button {
   background: #f1356d;
   color: #fff;
   border: 0;
   padding: 8px;
+  margin: 5px;
   border-radius: 8px;
   cursor: pointer;
 }

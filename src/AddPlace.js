@@ -64,7 +64,7 @@ const AddPlace = () => {
     }
 
     return ( 
-        <div>
+        <div className="create">
             <h2>Oceń dostępność miejsca</h2>
             { addressData && <form onSubmit={handleSubmit}>
                 <label>Nazwa:</label>

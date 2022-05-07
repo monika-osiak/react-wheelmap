@@ -31,7 +31,7 @@ const AddPoint = () => {
       }
 
     return ( 
-        <div>
+        <div className="create">
             <h2>Dodaj nowy punkt niedostępny</h2>
             { addressData && <form onSubmit={handleSubmit}>
                 <label>Nazwa:</label>

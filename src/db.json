@@ -69,6 +69,14 @@
       "description": "Niedostępny przystanek",
       "category": "na stałe",
       "id": 8
+    },
+    {
+      "lat": "52.25087310922623",
+      "lng": "21.091690063476566",
+      "name": "",
+      "description": "Dziura w chodniku, idk",
+      "category": "awaria",
+      "id": 9
     }
   ],
   "places": [
