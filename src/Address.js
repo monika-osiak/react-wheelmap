@@ -41,7 +41,7 @@ const Address = ({position}) => {
     let addressQuery = "?";
 
     return (
-        <div class="address">
+        <div className="address">
           { error && <div>{ error }</div> }
           { isPending && <div>Loading...</div> }
           { data && <p>{prettifyAddress(data)}</p> }
