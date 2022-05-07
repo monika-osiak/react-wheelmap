@@ -44,7 +44,7 @@ const Address = ({position}) => {
         <div className="address">
           { error && <div>{ error }</div> }
           { isPending && <div>Loading...</div> }
-          { data && <p>{prettifyAddress(data)}</p> }
+          { data && <p>{data.display_name}</p> }
           { data && <Link to={getAddressQuery(data)}>Przekaz adres</Link>}
         </div>
       );

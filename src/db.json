@@ -61,6 +61,14 @@
       "description": "jw.",
       "category": "awaria",
       "id": 7
+    },
+    {
+      "lat": "52.2239285392565",
+      "lng": "21.044000387191772",
+      "name": "",
+      "description": "Niedostępny przystanek",
+      "category": "na stałe",
+      "id": 8
     }
   ],
   "places": [
