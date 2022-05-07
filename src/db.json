@@ -99,6 +99,38 @@
         "something": false,
         "something else": true
       }
+    },
+    {
+      "name": "Szpital MON",
+      "description": "Dostępny szpital",
+      "lat": "52.25139856607883",
+      "lng": "21.088514328002933",
+      "country": "Polska",
+      "voivodeship": "województwo mazowieckie",
+      "city": "Warszawa",
+      "postal_code": "04-349",
+      "street": "Szaserów",
+      "number": "128",
+      "accessibility": {
+        "isHardcoded": true
+      },
+      "id": 3
+    },
+    {
+      "name": "CH Atrium Promenada",
+      "description": "Ocena dostępności centrum handlowego",
+      "lat": "52.23346624233684",
+      "lng": "21.10561609268189",
+      "country": "Polska",
+      "voivodeship": "województwo mazowieckie",
+      "city": "Warszawa",
+      "postal_code": "04-175",
+      "street": "Ostrobramska",
+      "number": "75D",
+      "accessibility": {
+        "isHardcoded": true
+      },
+      "id": 4
     }
   ]
 }

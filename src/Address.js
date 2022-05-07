@@ -1,13 +1,21 @@
 import { useEffect } from "react";
 import useFetch from "./useFetch";
 
-const pretifyAddress = (address) => {
-  let result = address.road + " "
-  result = result + address.house_number + ", "
-  result = result + address.postcode + " "
-  result = result + address.city + ", "
-  result = result + address.country
-  return result
+const prettifyAddress = (data) => {
+  let result = ""
+  if (data.name !== null) {
+      result = data.name + ", ";
+  };
+  result = result + data.address.road;
+  if ("house_number" in data.address) {
+      result = result + " " + data.address.house_number;
+  }
+  result = result + ", ";
+  result = result + data.address.postcode + " ";
+  result = result + data.address.city + ", ";
+  result = result + data.address.country;
+
+  return result;
 }
 
 const Address = ({position}) => {
@@ -18,7 +26,7 @@ const Address = ({position}) => {
         <div class="address">
           { error && <div>{ error }</div> }
           { isPending && <div>Loading...</div> }
-          { data && <p>{pretifyAddress(data.address)}</p> }
+          { data && <p>{prettifyAddress(data)}</p> }
         </div>
       );
 }
