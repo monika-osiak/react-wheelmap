@@ -16,8 +16,8 @@ function HandleClickOnMap() {
       <Marker position={position}>
         <Popup>
             <Address position={position}/>
-            <Link to={`/points/${position.lat}/${position.lng}`}>Dodaj punkt</Link>
-            <Link to={`/places/${position.lat}/${position.lng}`}>Dodaj miejsce</Link>
+            <Link to={`/points?lat=${position.lat}&lng=${position.lng}`}>Dodaj punkt</Link>
+            <Link to={`/places?lat=${position.lat}&lng=${position.lng}`}>Dodaj miejsce</Link>
         </Popup>
       </Marker>
     )

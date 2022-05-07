@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const AddPoint = () => {
-    const { lat, lng } = useParams();
+    // const { lat, lng } = useParams();
+    const [ searchParams, setSearchParams ] = useSearchParams();
+    const lat = searchParams.get("lat");
+    const lng = searchParams.get("lng");
     const [ name, setName ] = useState('');
     const [ description, setDescription ] = useState('');
     const [ category, setCategory ] = useState('inne');

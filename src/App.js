@@ -15,8 +15,8 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="/" element={<Map />} />
-          <Route path="/points/:lat/:lng" element={<AddPoint/>}/>
-          <Route path="/places/:lat/:lng" element={<AddPlace/>}/>
+          <Route path="/points/" element={<AddPoint/>}/>
+          <Route path="/places/" element={<AddPlace/>}/>
           <Route path="/location" element={<AddLocation/>}/>
           <Route path="*" element={<NotFound />}/>
         </Switch>

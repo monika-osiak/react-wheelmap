@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const AddPlace = () => {
-    const { lat, lng } = useParams();
+    const [ searchParams, setSearchParams ] = useSearchParams();
+    const lat = searchParams.get("lat");
+    const lng = searchParams.get("lng");
     let url = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" + lat+ "&lon=" + lng
     const { error, isPending, data: addressData } = useFetch(url)
     const [ loading, setLoading ] = useState(false);
@@ -60,15 +62,14 @@ const AddPlace = () => {
     return ( 
         <div>
             <h2>Oceń dostępność miejsca</h2>
-            <form onSubmit={handleSubmit}>
+            { addressData && <form onSubmit={handleSubmit}>
                 <label>Adres: </label>
                 { addressData && <p>{ prettifyAddress(addressData) }</p>}
-                { addressData && <p>{ JSON.stringify(addressData) }</p>}
                 <label>Nazwa:</label>
                 <input 
                     type="text" 
                     required
-                    value={name}
+                    value={addressData.name}
                     onChange={(e) => setName(e.target.value)}
                 />
                 <label>Opis:</label>
@@ -77,10 +78,9 @@ const AddPlace = () => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
-                <label>Kategoria:</label>
                 { !loading && <button>Dodaj punkt</button>}
                 { loading && <button disabled>Dodawanie punktu...</button>}
-            </form>
+            </form>}
         </div>
     );
 }
