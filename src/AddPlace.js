@@ -13,6 +13,11 @@ const AddPlace = () => {
 
     const [ name, setName ] = useState('');
     const [ description, setDescription ] = useState('');
+    const [ street, setStreet ] = useState('');
+    const [ number, setNumber ] = useState('');
+    const [ postcode, setPostcode ] = useState('');
+    const [ city, setCity ] = useState('');
+    const [ country, setCountry ] = useState('');
     const accessibility = { isHardcoded: true };
 
     const prettifyAddress = (data) => {
@@ -39,12 +44,11 @@ const AddPlace = () => {
             description,
             lat,
             lng,
-            country: addressData.address.country,
-            voivodeship: addressData.address.state,
-            city: addressData.address.city,
-            postal_code: addressData.address.postcode,
-            street: addressData.address.road,
-            number: addressData.address.house_number,
+            country,
+            city,
+            postcode,
+            street,
+            number,
             accessibility
         };
         setLoading(true);
@@ -63,15 +67,49 @@ const AddPlace = () => {
         <div>
             <h2>Oceń dostępność miejsca</h2>
             { addressData && <form onSubmit={handleSubmit}>
-                <label>Adres: </label>
-                { addressData && <p>{ prettifyAddress(addressData) }</p>}
                 <label>Nazwa:</label>
                 <input 
                     type="text" 
                     required
-                    value={addressData.name}
+                    value={name === '' ? addressData.name : name}
                     onChange={(e) => setName(e.target.value)}
                 />
+                <h4>Adres:</h4>
+                <label>Ulica:</label>
+                <input 
+                    type="text" 
+                    required
+                    value={street === '' ? addressData.address.road : street}
+                    onChange={(e) => setStreet(e.target.value)}
+                />
+                <label>Numer budynku:</label>
+                <input 
+                    type="text"
+                    value={number === '' ? addressData.address.house_number : number}
+                    onChange={(e) => setNumber(e.target.value)}
+                />
+                <label>Kod pocztowy:</label>
+                <input 
+                    type="text" 
+                    required
+                    value={postcode === '' ? addressData.address.postcode : postcode}
+                    onChange={(e) => setPostcode(e.target.value)}
+                />
+                <label>Miasto:</label>
+                <input 
+                    type="text" 
+                    required
+                    value={city === '' ? addressData.address.city : city}
+                    onChange={(e) => setCity(e.target.value)}
+                />
+                <label>Kraj:</label>
+                <input 
+                    type="text" 
+                    required
+                    value={country === '' ? addressData.address.country : country}
+                    onChange={(e) => setCountry(e.target.value)}
+                />
+                <h4>Informacje:</h4>
                 <label>Opis:</label>
                 <textarea
                     required

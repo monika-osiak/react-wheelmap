@@ -69,10 +69,9 @@
       "name": "Fundacja Avalon",
       "description": "Siedziba Fundacji Avalon. Miejsce odbywania się zajęć sportowych oraz innych.",
       "plus_code": "5XMV+GM Warszawa",
-      "country": "PL",
-      "voivodeship": "mazowieckie",
+      "country": "Polska",
       "city": "Warszawa",
-      "postal_code": "02-672",
+      "postcode": "02-672",
       "street": "Domaniewska",
       "number": "50A",
       "lat": 52.183485,
@@ -87,10 +86,9 @@
       "name": "Galeria Grochów",
       "description": "Galeria bez barier",
       "plus_code": null,
-      "country": "PL",
-      "voivodeship": "mazowieckie",
+      "country": "Polska",
       "city": "Warszawa",
-      "postal_code": "04-359",
+      "postcode": "04-359",
       "street": "Kobielska",
       "number": "23",
       "lat": 52.246501,
@@ -106,9 +104,8 @@
       "lat": "52.25139856607883",
       "lng": "21.088514328002933",
       "country": "Polska",
-      "voivodeship": "województwo mazowieckie",
       "city": "Warszawa",
-      "postal_code": "04-349",
+      "postcode": "04-349",
       "street": "Szaserów",
       "number": "128",
       "accessibility": {
@@ -122,15 +119,29 @@
       "lat": "52.23346624233684",
       "lng": "21.10561609268189",
       "country": "Polska",
-      "voivodeship": "województwo mazowieckie",
       "city": "Warszawa",
-      "postal_code": "04-175",
+      "postcode": "04-175",
       "street": "Ostrobramska",
       "number": "75D",
       "accessibility": {
         "isHardcoded": true
       },
       "id": 4
+    },
+    {
+      "name": "Budynek dawnego Wydziału Weterynarii SGGW",
+      "description": "Lorem ipsum",
+      "lat": "52.247010810365985",
+      "lng": "21.070747375488285",
+      "country": "",
+      "city": "",
+      "postcode": "",
+      "street": "",
+      "number": "",
+      "accessibility": {
+        "isHardcoded": true
+      },
+      "id": 5
     }
   ]
 }
