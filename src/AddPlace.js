@@ -6,18 +6,26 @@ const AddPlace = () => {
     const [ searchParams, setSearchParams ] = useSearchParams();
     const lat = searchParams.get("lat");
     const lng = searchParams.get("lng");
+
     let url = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" + lat+ "&lon=" + lng
     const { error, isPending, data: addressData } = useFetch(url)
+
     const [ loading, setLoading ] = useState(false);
     const navigate = useNavigate();
 
     const [ name, setName ] = useState('');
+    const [ nameChanged, setNameChanged ] = useState(false);
     const [ description, setDescription ] = useState('');
     const [ street, setStreet ] = useState('');
+    const [ streetChanged, setStreetChanged ] = useState(false);
     const [ number, setNumber ] = useState('');
+    const [ numberChanged, setNumberChanged ] = useState(false);
     const [ postcode, setPostcode ] = useState('');
+    const [ postcodeChanged, setPostcodeChanged ] = useState(false);
     const [ city, setCity ] = useState('');
+    const [ cityChanged, setCityChanged ] = useState(false);
     const [ country, setCountry ] = useState('');
+    const [ countryChanged, setCountryChanged ] = useState(false);
 
     const [ toaletaAkt, setToaletaAkt ] = useState(true);
     const [ toaletaElektr, setToaletaElektr ] = useState(true);
@@ -29,23 +37,6 @@ const AddPlace = () => {
     const [ drzwiAkt, setDrzwiAkt ] = useState(true);
     const [ drzwiElektr, setDrzwiElektr ] = useState(true);
     const [ rownyTeren, setRownyTeren ] = useState(true);
-
-    const prettifyAddress = (data) => {
-        let result = ""
-        if (data.name !== null) {
-            result = data.name + ", ";
-        };
-        result = result + data.address.road;
-        if ("house_number" in data.address) {
-            result = result + " " + data.address.house_number;
-        }
-        result = result + ", ";
-        result = result + data.address.postcode + " ";
-        result = result + data.address.city + ", ";
-        result = result + data.address.country;
-
-        return result;
-      }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -83,22 +74,22 @@ const AddPlace = () => {
     }
 
     const setAddress = () => {
-        if (name === "" && addressData.name !== null) {
+        if (!nameChanged && addressData.name !== null) {
             setName(addressData.name);
         }
-        if (country === "") {
+        if (!countryChanged) {
             setCountry(addressData.address.country);
         }
-        if (city === "" && addressData.address.city !== null) {
+        if (!cityChanged && addressData.address.city !== null) {
             setCity(addressData.address.city);
         }
-        if (postcode === "") {
+        if (!postcodeChanged) {
             setPostcode(addressData.address.postcode);
         }
-        if (street === "") {
+        if (!streetChanged) {
             setStreet(addressData.address.road);
         }
-        if (number === "" && addressData.address.house_number !== null) {
+        if (!numberChanged && addressData.address.house_number !== null) {
             setNumber(addressData.address.number);
         }
     }
@@ -113,45 +104,63 @@ const AddPlace = () => {
                 <input 
                     type="text" 
                     required
-                    value={name === '' && addressData.name !== null ? addressData.name : name}
-                    onChange={(e) => setName(e.target.value)}
+                    value={!nameChanged ? addressData.name : name}
+                    onChange={(e) => {
+                        setName(e.target.value);
+                        setNameChanged(true);
+                    }}
                 />
-                <h4>Adres:</h4>
+                <h4>Adres</h4>
                 <label>Ulica:</label>
                 <input 
                     type="text" 
                     required
-                    value={street === '' ? addressData.address.road : street}
-                    onChange={(e) => setStreet(e.target.value)}
+                    value={!streetChanged ? addressData.address.road : street}
+                    onChange={(e) => {
+                        setStreet(e.target.value);
+                        setStreetChanged(true);
+                    }}
                 />
                 <label>Numer budynku:</label>
                 <input 
                     type="text"
-                    value={number === '' && ("house_number" in addressData.address) ? addressData.address.house_number : number}
-                    onChange={(e) => setNumber(e.target.value)}
+                    value={!numberChanged ? addressData.address.house_number : number}
+                    onChange={(e) => {
+                        setNumber(e.target.value);
+                        setNumberChanged(true);
+                    }}
                 />
                 <label>Kod pocztowy:</label>
                 <input 
                     type="text" 
                     required
-                    value={postcode === '' ? addressData.address.postcode : postcode}
-                    onChange={(e) => setPostcode(e.target.value)}
+                    value={!postcodeChanged ? addressData.address.postcode : postcode}
+                    onChange={(e) => {
+                        setPostcode(e.target.value);
+                        setPostcodeChanged(true);
+                    }}
                 />
                 <label>Miasto:</label>
                 <input 
                     type="text" 
                     required
-                    value={city === '' ? addressData.address.city : city}
-                    onChange={(e) => setCity(e.target.value)}
+                    value={!cityChanged ? addressData.address.city : city}
+                    onChange={(e) => {
+                        setCity(e.target.value);
+                        setCityChanged(true);
+                    }}
                 />
                 <label>Kraj:</label>
                 <input 
                     type="text" 
                     required
-                    value={country === '' ? addressData.address.country : country}
-                    onChange={(e) => setCountry(e.target.value)}
+                    value={!countryChanged ? addressData.address.country : country}
+                    onChange={(e) => {
+                        setCountry(e.target.value);
+                        setCountryChanged(true);
+                    }}
                 />
-                <h4>Informacje:</h4>
+                <h4>Informacje</h4>
                 <label>Ogólny opis:</label>
                 <textarea
                     required
@@ -208,8 +217,8 @@ const AddPlace = () => {
                     defaultChecked={rownyTeren}
                     onChange={(e) => setRownyTeren(!rownyTeren)}
                 />
-                { !loading && <button onClick={setAddress}>Dodaj punkt</button>}
-                { loading && <button disabled>Dodawanie punktu...</button>}
+                { !loading && <button onClick={setAddress}>Dodaj miejsce</button>}
+                { loading && <button disabled>Dodawanie miejsca...</button>}
             </form>}
         </div>
     );

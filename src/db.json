@@ -119,6 +119,14 @@
       "description": "Nie działa winda",
       "category": "awaria",
       "id": 15
+    },
+    {
+      "lat": "52.24041522350549",
+      "lng": "21.082806587219242",
+      "name": "Skrzyżowanie Grenadierów/Waszyngtona",
+      "description": "Remont chodnika, przejście po nierównym terenie",
+      "category": "remont",
+      "id": 16
     }
   ],
   "places": [
@@ -225,6 +233,27 @@
       "drzwiElektr": true,
       "rownyTeren": true,
       "id": 5
+    },
+    {
+      "name": "Kościół pw. Najczystszego Serca Maryi",
+      "description": "Kościół na Szembeka",
+      "lat": "52.24448831124506",
+      "lng": "21.103320121765137",
+      "country": "Polska",
+      "city": "Warszawa",
+      "postcode": "04-314",
+      "street": "Józefa Chłopickiego",
+      "toaletaAkt": false,
+      "toaletaElektr": false,
+      "parking": true,
+      "winda": false,
+      "brakProgow": false,
+      "swobodnyAkt": true,
+      "swobodnyElektr": true,
+      "drzwiAkt": true,
+      "drzwiElektr": true,
+      "rownyTeren": false,
+      "id": 6
     }
   ]
 }

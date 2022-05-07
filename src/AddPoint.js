@@ -3,17 +3,20 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const AddPoint = () => {
-    // const { lat, lng } = useParams();
     const [ searchParams, setSearchParams ] = useSearchParams();
     const lat = searchParams.get("lat");
     const lng = searchParams.get("lng");
-    const [ name, setName ] = useState('');
-    const [ description, setDescription ] = useState('');
-    const [ category, setCategory ] = useState('inne');
+
     let url = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" + lat+ "&lon=" + lng
     const { error, isPending, data: addressData } = useFetch(url)
+
     const [ loading, setLoading ] = useState(false);
     const navigate = useNavigate();
+
+    const [ name, setName ] = useState('');
+    const [ nameChanged, setNameChanged ] = useState(false);
+    const [ description, setDescription ] = useState('');
+    const [ category, setCategory ] = useState('inne');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -38,8 +41,11 @@ const AddPoint = () => {
                 <input 
                     type="text" 
                     required
-                    value={name === '' && addressData.name !== null ? addressData.name : name}
-                    onChange={(e) => setName(e.target.value)}
+                    value={!nameChanged ? addressData.name : name}
+                    onChange={(e) => {
+                        setName(e.target.value);
+                        setNameChanged(true);
+                    }}
                 />
                 <label>Opis:</label>
                 <textarea
@@ -47,9 +53,6 @@ const AddPoint = () => {
                     value={description}
                     onChange={(e) => {
                         setDescription(e.target.value);
-                        if (name === '' && addressData.name !== null) {
-                            setName(addressData.name);
-                        }
                     }}
                 />
                 <label>Kategoria:</label>
@@ -64,7 +67,7 @@ const AddPoint = () => {
                 </select>
                 { !loading && <button 
                     onClick={(e) => {
-                        if (name === '' && addressData.name !== null) {
+                        if (!nameChanged && addressData.name !== null) {
                             setName(addressData.name);
                         }
                     }
