@@ -18,7 +18,17 @@ const AddPlace = () => {
     const [ postcode, setPostcode ] = useState('');
     const [ city, setCity ] = useState('');
     const [ country, setCountry ] = useState('');
-    const accessibility = { isHardcoded: true };
+
+    const [ toaletaAkt, setToaletaAkt ] = useState(true);
+    const [ toaletaElektr, setToaletaElektr ] = useState(true);
+    const [ parking, setParking ] = useState(true);
+    const [ winda, setWinda ] = useState(true);
+    const [ brakProgow, setBrakProgow ] = useState(true);
+    const [ swobodnyAkt, setSwobodnyAkt ] = useState(true);
+    const [ swobodnyElektr, setSwobodnyElektr ] = useState(true);
+    const [ drzwiAkt, setDrzwiAkt ] = useState(true);
+    const [ drzwiElektr, setDrzwiElektr ] = useState(true);
+    const [ rownyTeren, setRownyTeren ] = useState(true);
 
     const prettifyAddress = (data) => {
         let result = ""
@@ -49,7 +59,16 @@ const AddPlace = () => {
             postcode,
             street,
             number,
-            accessibility
+            toaletaAkt,
+            toaletaElektr,
+            parking,
+            winda,
+            brakProgow,
+            swobodnyAkt,
+            swobodnyElektr,
+            drzwiAkt,
+            drzwiElektr,
+            rownyTeren
         };
         setLoading(true);
         
@@ -63,10 +82,33 @@ const AddPlace = () => {
         })
     }
 
+    const setAddress = () => {
+        if (name === "" && addressData.name !== null) {
+            setName(addressData.name);
+        }
+        if (country === "") {
+            setCountry(addressData.address.country);
+        }
+        if (city === "" && addressData.address.city !== null) {
+            setCity(addressData.address.city);
+        }
+        if (postcode === "") {
+            setPostcode(addressData.address.postcode);
+        }
+        if (street === "") {
+            setStreet(addressData.address.road);
+        }
+        if (number === "" && addressData.address.house_number !== null) {
+            setNumber(addressData.address.number);
+        }
+    }
+
     return ( 
         <div className="create">
             <h2>Oceń dostępność miejsca</h2>
-            { addressData && <form onSubmit={handleSubmit}>
+            { addressData && <form 
+                onSubmit={handleSubmit}
+            >
                 <label>Nazwa:</label>
                 <input 
                     type="text" 
@@ -110,13 +152,63 @@ const AddPlace = () => {
                     onChange={(e) => setCountry(e.target.value)}
                 />
                 <h4>Informacje:</h4>
-                <label>Opis:</label>
+                <label>Ogólny opis:</label>
                 <textarea
                     required
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
-                { !loading && <button>Dodaj punkt</button>}
+                <label>Toaleta przystosowana dla osób na wózkach aktywnych</label>
+                <input type="checkbox" 
+                    defaultChecked={toaletaAkt}
+                    onChange={(e) => setToaletaAkt(!toaletaAkt)}
+                />
+                <label>Toaleta przystosowana dla osób na wózkach elektrycznych</label>
+                <input type="checkbox" 
+                    defaultChecked={toaletaElektr}
+                    onChange={(e) => setToaletaElektr(!toaletaElektr)}
+                />
+                <label>Parking dla osób z niepełnosprawnością</label>
+                <input type="checkbox" 
+                    defaultChecked={parking}
+                    onChange={(e) => setParking(!parking)}
+                />
+                <label>Brak schodów lub winda</label>
+                <input type="checkbox" 
+                    defaultChecked={winda}
+                    onChange={(e) => setWinda(!winda)}
+                />
+                <label>Brak progów</label>
+                <input type="checkbox" 
+                    defaultChecked={brakProgow}
+                    onChange={(e) => setBrakProgow(!brakProgow)}
+                />
+                <label>Możliwość swodobnego poruszania się na wózku aktywnym</label>
+                <input type="checkbox" 
+                    defaultChecked={swobodnyAkt}
+                    onChange={(e) => setSwobodnyAkt(!swobodnyAkt)}
+                />
+                <label>Możliwość swodobnego poruszania się na wózku elektrycznym</label>
+                <input type="checkbox" 
+                    defaultChecked={swobodnyElektr}
+                    onChange={(e) => setSwobodnyElektr(!swobodnyElektr)}
+                />
+                <label>Drzwi wystarczająco szerokie dla wózka aktywnego</label>
+                <input type="checkbox" 
+                    defaultChecked={drzwiAkt}
+                    onChange={(e) => setDrzwiAkt(!drzwiAkt)}
+                />
+                <label>Drzwi wystarczająco szerokie dla wózka elektrycznego</label>
+                <input type="checkbox" 
+                    defaultChecked={drzwiElektr}
+                    onChange={(e) => setDrzwiElektr(!drzwiElektr)}
+                />
+                <label>Brak nierówności terenu</label>
+                <input type="checkbox" 
+                    defaultChecked={rownyTeren}
+                    onChange={(e) => setRownyTeren(!rownyTeren)}
+                />
+                { !loading && <button onClick={setAddress}>Dodaj punkt</button>}
                 { loading && <button disabled>Dodawanie punktu...</button>}
             </form>}
         </div>
