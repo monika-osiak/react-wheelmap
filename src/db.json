@@ -1,163 +1,109 @@
 {
   "points": [
     {
-      "id": 1,
-      "name": "Remont chodnika – ulica Grochowska",
-      "description": "Remont chodnika, uwaga na utrudnienia",
-      "lat": 52.245523,
-      "lng": 21.083414,
-      "plus_code": null,
-      "category": "remont",
-      "active": true
-    },
-    {
-      "id": 2,
-      "name": "Niedziałająca winda",
-      "description": "Nie działa winda przy kładce",
-      "lat": 52.24458,
-      "lng": 21.090516,
-      "plus_code": null,
-      "category": "awaria",
-      "active": true
-    },
-    {
-      "id": 3,
-      "name": "Kładka bez windy",
-      "description": "Tylko schody",
-      "lat": 52.238156,
-      "lng": 21.080919,
-      "plus_code": null,
+      "lat": "52.235139362254436",
+      "lng": "21.037262678146366",
+      "name": "Most Poniatowskiego 03",
+      "description": "Dostęp do przystanku tramwajowego tylko po schodach",
       "category": "na stałe",
-      "active": true
+      "id": 1
     },
     {
-      "lat": "52.25029509949964",
-      "lng": "21.084566116333008",
-      "name": "Skrzyżowanie Wiatracznej z Dwernickiego",
-      "description": "Remont",
-      "category": "remont",
+      "lat": "52.23495867096783",
+      "lng": "21.036227345466614",
+      "name": "Most Poniatowskiego 04",
+      "description": "Dostęp do przystanku tramwajowego tylko po schodach",
+      "category": "na stałe",
+      "id": 2
+    },
+    {
+      "lat": "52.224089558802284",
+      "lng": "21.044000387191772",
+      "name": "Torwar 01",
+      "description": "Przystanek autobusowy na wiadukcie, dostęp tylko po schodach",
+      "category": "na stałe",
+      "id": 3
+    },
+    {
+      "lat": "52.224204572406094",
+      "lng": "21.04356050491333",
+      "name": "Torwar 03",
+      "description": "Przystanek autobusowy pod wiaduktem, dostęp tylko po schodach",
+      "category": "na stałe",
       "id": 4
     },
     {
-      "lat": "52.23580955623914",
-      "lng": "21.079952716827393",
-      "name": "Przejście pod ulicą",
-      "description": "Tylko schody i stromy zjazd dla wózków dziecięcych",
+      "lat": "52.21964980601295",
+      "lng": "21.026335358619693",
+      "name": "Plac Na Rozdrożu 06",
+      "description": "Przystanek autobusowy pomiędzy pasami jezdni, dostęp tylko po schodach",
       "category": "na stałe",
       "id": 5
     },
     {
-      "lat": "52.224204572406094",
-      "lng": "21.04358196258545",
-      "name": "Torwar 01",
-      "description": "Zejście na dół tylko po schodach, brak windy",
+      "lat": "52.219531494167654",
+      "lng": "21.026362180709842",
+      "name": "Plac Na Rozdrożu 05",
+      "description": "Przystanek autobusowy pomiędzy pasami jezdni, dostęp tylko po schodach",
       "category": "na stałe",
       "id": 6
     },
     {
-      "lat": "52.24406788078239",
-      "lng": "21.08636856079102",
-      "name": "Zepsuta winda w Galerii Rondo Wiatraczna",
-      "description": "jw.",
-      "category": "awaria",
+      "lat": "52.21807886193176",
+      "lng": "21.01988732814789",
+      "name": "Marszałkowska 02",
+      "description": "Przystanek autobusowy dostępny tylko po schodach",
+      "category": "na stałe",
       "id": 7
     },
     {
-      "lat": "52.2239285392565",
-      "lng": "21.044000387191772",
-      "name": "",
-      "description": "Niedostępny przystanek",
+      "lat": "52.21785208926363",
+      "lng": "21.01994633674622",
+      "name": "Marszałkowska 01",
+      "description": "Przystanek autobusowy dostępny tylko po schodach",
       "category": "na stałe",
       "id": 8
     },
     {
-      "lat": "52.25087310922623",
-      "lng": "21.091690063476566",
-      "name": "",
-      "description": "Dziura w chodniku, idk",
-      "category": "awaria",
+      "lat": "52.21703043946408",
+      "lng": "21.01440489292145",
+      "name": "Metro Politechnika 51",
+      "description": "Tymczasowy przystanek autobusowy z dostępem tylko po schodach",
+      "category": "remont",
       "id": 9
+    },
+    {
+      "lat": "52.21730651549231",
+      "lng": "21.006245613098148",
+      "name": "GUS 06",
+      "description": "Przystanek autobusowy dostępny tylko po schodach",
+      "category": "na stałe",
+      "id": 10
+    },
+    {
+      "lat": "52.217188197404624",
+      "lng": "21.006122231483463",
+      "name": "GUS 05",
+      "description": "Przystanek autobusowy dostępny tylko po schodach",
+      "category": "na stałe",
+      "id": 11
+    },
+    {
+      "lat": "52.2165966022384",
+      "lng": "21.00524246692658",
+      "name": "GUS 04",
+      "description": "Przystanek tramwajowy pomiędzy pasami jezdni, dostęp jedynie po schodach",
+      "category": "na stałe",
+      "id": 12
+    },
+    {
+      "lat": "52.21632052179754",
+      "lng": "21.005263924598697",
+      "name": "GUS 03",
+      "description": "Przystanek tramwajowy pomiędzy pasami jezdni, dostęp jedynie po schodach",
+      "category": "na stałe",
+      "id": 13
     }
   ],
-  "places": [
-    {
-      "id": 1,
-      "name": "Fundacja Avalon",
-      "description": "Siedziba Fundacji Avalon. Miejsce odbywania się zajęć sportowych oraz innych.",
-      "plus_code": "5XMV+GM Warszawa",
-      "country": "Polska",
-      "city": "Warszawa",
-      "postcode": "02-672",
-      "street": "Domaniewska",
-      "number": "50A",
-      "lat": 52.183485,
-      "lng": 20.994495,
-      "accessibility": {
-        "key": true,
-        "other_key": false
-      }
-    },
-    {
-      "id": 2,
-      "name": "Galeria Grochów",
-      "description": "Galeria bez barier",
-      "plus_code": null,
-      "country": "Polska",
-      "city": "Warszawa",
-      "postcode": "04-359",
-      "street": "Kobielska",
-      "number": "23",
-      "lat": 52.246501,
-      "lng": 21.085599,
-      "accessibility": {
-        "something": false,
-        "something else": true
-      }
-    },
-    {
-      "name": "Szpital MON",
-      "description": "Dostępny szpital",
-      "lat": "52.25139856607883",
-      "lng": "21.088514328002933",
-      "country": "Polska",
-      "city": "Warszawa",
-      "postcode": "04-349",
-      "street": "Szaserów",
-      "number": "128",
-      "accessibility": {
-        "isHardcoded": true
-      },
-      "id": 3
-    },
-    {
-      "name": "CH Atrium Promenada",
-      "description": "Ocena dostępności centrum handlowego",
-      "lat": "52.23346624233684",
-      "lng": "21.10561609268189",
-      "country": "Polska",
-      "city": "Warszawa",
-      "postcode": "04-175",
-      "street": "Ostrobramska",
-      "number": "75D",
-      "accessibility": {
-        "isHardcoded": true
-      },
-      "id": 4
-    },
-    {
-      "name": "Budynek dawnego Wydziału Weterynarii SGGW",
-      "description": "Lorem ipsum",
-      "lat": "52.247010810365985",
-      "lng": "21.070747375488285",
-      "country": "",
-      "city": "",
-      "postcode": "",
-      "street": "",
-      "number": "",
-      "accessibility": {
-        "isHardcoded": true
-      },
-      "id": 5
-    }
-  ]
+  "places": []
 }

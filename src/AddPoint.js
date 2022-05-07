@@ -45,7 +45,12 @@ const AddPoint = () => {
                 <textarea
                     required
                     value={description}
-                    onChange={(e) => setDescription(e.target.value)}
+                    onChange={(e) => {
+                        setDescription(e.target.value);
+                        if (name === '' && addressData.name !== null) {
+                            setName(addressData.name);
+                        }
+                    }}
                 />
                 <label>Kategoria:</label>
                 <select
@@ -57,7 +62,13 @@ const AddPoint = () => {
                     <option value="remont">remont</option>
                     <option value="inne">inne</option>
                 </select>
-                { !loading && <button>Dodaj punkt</button>}
+                { !loading && <button 
+                    onClick={(e) => {
+                        if (name === '' && addressData.name !== null) {
+                            setName(addressData.name);
+                        }
+                    }
+                }>Dodaj punkt</button>}
                 { loading && <button disabled>Dodawanie punktu...</button>}
             </form>}
         </div>
