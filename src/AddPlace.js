@@ -71,7 +71,7 @@ const AddPlace = () => {
                 <input 
                     type="text" 
                     required
-                    value={name === '' ? addressData.name : name}
+                    value={name === '' && addressData.name !== null ? addressData.name : name}
                     onChange={(e) => setName(e.target.value)}
                 />
                 <h4>Adres:</h4>
@@ -85,7 +85,7 @@ const AddPlace = () => {
                 <label>Numer budynku:</label>
                 <input 
                     type="text"
-                    value={number === '' ? addressData.address.house_number : number}
+                    value={number === '' && ("house_number" in addressData.address) ? addressData.address.house_number : number}
                     onChange={(e) => setNumber(e.target.value)}
                 />
                 <label>Kod pocztowy:</label>
