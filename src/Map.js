@@ -3,6 +3,7 @@ import Places from './Places';
 import InaccessiblePoints from './InaccessiblePoints';
 import HandleClickOnMap from './HandleClickOnMap';
 import useFetch from './useFetch';
+import SearchField from './SearchField';
 
 const Map = () => {
     const { error: errorPoints, loading: loadingPoints, data: points } = useFetch('http://localhost:8000/points')
@@ -11,6 +12,7 @@ const Map = () => {
     return ( 
         <MapContainer center={[52.246501, 21.085599]} zoom={15} scrollWheelZoom={false}>
             <HandleClickOnMap/>
+            <SearchField/>
             {points && <InaccessiblePoints points={points}></InaccessiblePoints>}
             {places && <Places places={places}></Places>}
             <TileLayer

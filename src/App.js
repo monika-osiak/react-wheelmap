@@ -6,6 +6,7 @@ import Map from './Map';
 import Navbar from './Navbar';
 import NotFound from './NoFound';
 import AddLocation from './AddLocation';
+import '../node_modules/leaflet-geosearch/dist/geosearch.css';
 
 function App() {
 
