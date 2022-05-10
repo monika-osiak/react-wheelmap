@@ -127,6 +127,14 @@
       "description": "Remont chodnika, przejście po nierównym terenie",
       "category": "remont",
       "id": 16
+    },
+    {
+      "lat": "52.2282665",
+      "lng": "21.0037327",
+      "name": "Dworzec Centralny 02",
+      "description": "Awaria windy",
+      "category": "awaria",
+      "id": 17
     }
   ],
   "places": [
@@ -254,6 +262,48 @@
       "drzwiElektr": true,
       "rownyTeren": false,
       "id": 6
+    },
+    {
+      "name": "Fundacja Avalon",
+      "description": "Zajęcia sportowe, rehabilitacja",
+      "lat": "52.18378031674627",
+      "lng": "20.994116663932804",
+      "country": "Polska",
+      "city": "Warszawa",
+      "postcode": "02-672",
+      "street": "Domaniewska",
+      "toaletaAkt": true,
+      "toaletaElektr": true,
+      "parking": true,
+      "winda": true,
+      "brakProgow": true,
+      "swobodnyAkt": true,
+      "swobodnyElektr": true,
+      "drzwiAkt": true,
+      "drzwiElektr": true,
+      "rownyTeren": true,
+      "id": 7
+    },
+    {
+      "name": "SPORTIM",
+      "description": "Niedostępny sklep rowerowy",
+      "lat": "52.2462924",
+      "lng": "21.0866483",
+      "country": "Polska",
+      "city": "Warszawa",
+      "postcode": "04-359",
+      "street": "Kobielska",
+      "toaletaAkt": false,
+      "toaletaElektr": false,
+      "parking": true,
+      "winda": false,
+      "brakProgow": false,
+      "swobodnyAkt": true,
+      "swobodnyElektr": false,
+      "drzwiAkt": true,
+      "drzwiElektr": false,
+      "rownyTeren": false,
+      "id": 8
     }
   ]
 }
