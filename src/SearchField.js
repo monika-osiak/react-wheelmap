@@ -17,7 +17,10 @@ const SearchField = () => {
   const searchControl = new GeoSearchControl({
     provider: provider,
     position: 'topright',
-    showPopup: false,
+    showPopup: true,
+    autoComplete: true, // optional: true|false  - default true
+    autoCompleteDelay: 1,
+    showMarker: true,
     marker: {
       icon: SearchResultIcon(),
       draggable: false,
@@ -26,15 +29,15 @@ const SearchField = () => {
   });
 
   const map = useMap();
-  const yourEventHandler = (e) => {
-    console.log(e.location);
-    var popup = L.popup()
-      .setLatLng([e.location.y, e.location.y])
-      .setContent('<p>Hello world!<br />This is a nice popup.</p>')
-      .openOn(map);
-  }
+  // const yourEventHandler = (e) => {
+  //   console.log(e.location);
+  //   var popup = L.popup()
+  //     .setLatLng([e.location.y, e.location.x])
+  //     .setContent(handleLocation(e.location.label, { lat: e.location.y, lng: e.location.x }))
+  //     .openOn(map);
+  // }
 
-  map.on('geosearch/showlocation', yourEventHandler);
+  // map.on('geosearch/showlocation', yourEventHandler);
 
   useEffect(() => {
     map.addControl(searchControl);
