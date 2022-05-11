@@ -7,13 +7,13 @@ import L from 'leaflet';
 
 const SearchField = () => {
   const provider = new OpenStreetMapProvider(); 
-  const handleLocation = (label, position) => {
-    return `<div className="location">
-      <p>${label}</p>
-      <a href=/points?lat=${position.lat}&lng=${position.lng}><button>Dodaj punkt</button><a>
-      <a href=/places?lat=${position.lat}&lng=${position.lng}><button>Dodaj miejsce</button><a>
-    </div>`
-  }
+  // const handleLocation = (label, position) => {
+  //   return `<div className="location">
+  //     <p>${label}</p>
+  //     <a href=/points?lat=${position.lat}&lng=${position.lng}><button>Dodaj punkt</button><a>
+  //     <a href=/places?lat=${position.lat}&lng=${position.lng}><button>Dodaj miejsce</button><a>
+  //   </div>`
+  // }
   const searchControl = new GeoSearchControl({
     provider: provider,
     position: 'topright',
@@ -25,7 +25,7 @@ const SearchField = () => {
       icon: SearchResultIcon(),
       draggable: false,
     },
-    popupFormat: ({ query, result }) => handleLocation(result.label, { lat: result.y, lng: result.x }),
+    //popupFormat: ({ query, result }) => handleLocation(result.label, { lat: result.y, lng: result.x }),
   });
 
   const map = useMap();
