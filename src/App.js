@@ -14,7 +14,7 @@ function App() {
       <div id="app">
         <Navbar/>
         <Switch>
-          <Route exact path="/" element={<Map />} />
+          <Route exact path="" element={<Map />} />
           <Route path="/points/" element={<AddPoint/>}/>
           <Route path="/places/" element={<AddPlace/>}/>
           <Route path="/location" element={<AddLocation/>}/>
