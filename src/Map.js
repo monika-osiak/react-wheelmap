@@ -13,6 +13,7 @@ const Map = () => {
         <MapContainer center={[52.246501, 21.085599]} zoom={15} scrollWheelZoom={false}>
             <HandleClickOnMap/>
             <SearchField/>
+            {points && console.log(points)}
             {points && <InaccessiblePoints points={points}></InaccessiblePoints>}
             {places && <Places places={places}></Places>}
             <TileLayer
