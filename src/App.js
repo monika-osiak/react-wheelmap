@@ -6,7 +6,6 @@ import Map from './Map';
 import Navbar from './Navbar';
 import NotFound from './NoFound';
 import AddLocation from './AddLocation';
-import '../node_modules/leaflet-geosearch/dist/geosearch.css';
 
 function App() {
 
@@ -15,7 +14,7 @@ function App() {
       <div id="app">
         <Navbar/>
         <Switch>
-          <Route exact path="/" element={<Map />} />
+          <Route exact path="" element={<Map />} />
           <Route path="/points/" element={<AddPoint/>}/>
           <Route path="/places/" element={<AddPlace/>}/>
           <Route path="/location" element={<AddLocation/>}/>

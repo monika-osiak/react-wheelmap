@@ -2,7 +2,6 @@ import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import { useEffect } from 'react';
 import { useMap } from 'react-leaflet';
 import SearchResultIcon from './SearchResultIcon';
-import { Link } from 'react-router-dom';
 import L from 'leaflet';
 
 const SearchField = () => {
@@ -18,19 +17,31 @@ const SearchField = () => {
     provider: provider,
     position: 'topright',
     showPopup: false,
+    autoComplete: true, // optional: true|false  - default true
+    autoCompleteDelay: 250,
+    showMarker: false,
     marker: {
       icon: SearchResultIcon(),
       draggable: false,
     },
     popupFormat: ({ query, result }) => handleLocation(result.label, { lat: result.y, lng: result.x }),
+    maxMarker: 1,
+    autoClose: true,
+    retainZoomLevel: true,
+    maxSuggestions: 5,
+    keepResult: false,
+    resultFormat: function(t) {
+      return "" + t.result.label;
+    },
+    updateMap: !0
   });
 
   const map = useMap();
   const yourEventHandler = (e) => {
     console.log(e.location);
     var popup = L.popup()
-      .setLatLng([e.location.y, e.location.y])
-      .setContent('<p>Hello world!<br />This is a nice popup.</p>')
+      .setLatLng([e.location.y, e.location.x])
+      .setContent(handleLocation(e.location.label, { lat: e.location.y, lng: e.location.x }))
       .openOn(map);
   }
 
