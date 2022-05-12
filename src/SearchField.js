@@ -1,7 +1,6 @@
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import { useEffect } from 'react';
 import { useMap } from 'react-leaflet';
-import SearchResultIcon from './SearchResultIcon';
 import L from 'leaflet';
 
 const SearchField = () => {
@@ -21,7 +20,6 @@ const SearchField = () => {
     autoCompleteDelay: 250,
     showMarker: false,
     marker: {
-      icon: SearchResultIcon(),
       draggable: false,
     },
     popupFormat: ({ query, result }) => handleLocation(result.label, { lat: result.y, lng: result.x }),

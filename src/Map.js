@@ -4,13 +4,15 @@ import InaccessiblePoints from './InaccessiblePoints';
 import HandleClickOnMap from './HandleClickOnMap';
 import useFetch from './useFetch';
 import SearchField from './SearchField';
+import FindMe from './FindMe';
 
 const Map = () => {
     const { error: errorPoints, loading: loadingPoints, data: points } = useFetch('https://new-fast-wheelmap.herokuapp.com/points/')
     const { error: errorPlaces, loading: loadingPlaces, data: places } = useFetch('https://new-fast-wheelmap.herokuapp.com/places/')
 
     return ( 
-        <MapContainer center={[52.246501, 21.085599]} zoom={15} scrollWheelZoom={false}>
+        <MapContainer center={[52.229902301977944, 21.01143836975098]} zoom={15} scrollWheelZoom={false}>
+            <FindMe/>
             <HandleClickOnMap/>
             <SearchField/>
             {points && console.log(points)}
