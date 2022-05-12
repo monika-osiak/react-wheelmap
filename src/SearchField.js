@@ -9,8 +9,8 @@ const SearchField = () => {
   const handleLocation = (label, position) => {
     return `<div className="location">
       <p>${label}</p>
-      <a href=/points?lat=${position.lat}&lng=${position.lng}><button>Dodaj punkt</button><a>
-      <a href=/places?lat=${position.lat}&lng=${position.lng}><button>Dodaj miejsce</button><a>
+      <a href=#/points?lat=${position.lat}&lng=${position.lng}><button>Dodaj punkt</button><a>
+      <a href=#/places?lat=${position.lat}&lng=${position.lng}><button>Dodaj miejsce</button><a>
     </div>`
   }
   const searchControl = new GeoSearchControl({

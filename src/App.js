@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes as Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes as Switch } from 'react-router-dom';
 import AddPoint from './AddPoint';
 import AddPlace from './AddPlace';
 import './App.css';
@@ -15,6 +15,7 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="" element={<Map />} />
+          <Route exact path="/react-wheelmap" element={<Map />} />
           <Route path="/points/" element={<AddPoint/>}/>
           <Route path="/places/" element={<AddPlace/>}/>
           <Route path="/location" element={<AddLocation/>}/>
