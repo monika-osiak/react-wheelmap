@@ -14,6 +14,7 @@ const Map = () => {
             <HandleClickOnMap/>
             <SearchField/>
             {points && console.log(points)}
+            {places && console.log(places)}
             {points && <InaccessiblePoints points={points}></InaccessiblePoints>}
             {places && <Places places={places}></Places>}
             <TileLayer
