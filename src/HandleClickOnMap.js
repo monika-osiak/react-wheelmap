@@ -14,7 +14,7 @@ function HandleClickOnMap() {
   
     return position === null ? null : (
       <Marker position={position}>
-        <Popup>
+        <Popup closeButton={false}>
             <Address position={position}/>
             <Link to={`/points?lat=${position.lat}&lng=${position.lng}`}><button>Dodaj punkt</button></Link>
             <Link to={`/places?lat=${position.lat}&lng=${position.lng}`}><button>Dodaj miejsce</button></Link>

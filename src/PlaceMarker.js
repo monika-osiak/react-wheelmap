@@ -6,7 +6,7 @@ const PlaceMarker = ({ place }) => {
         position={[place.lat, place.lng]} 
         icon={PlaceIcon()}
     >
-        <Popup>
+        <Popup closeButton={false}>
             <h3>{place.name}</h3>
             <p>{place.description}</p>
             <h4>Stopień dostosowania</h4>

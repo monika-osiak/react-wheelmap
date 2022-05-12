@@ -37,7 +37,7 @@ const SearchField = () => {
   const map = useMap();
   const yourEventHandler = (e) => {
     console.log(e.location);
-    var popup = L.popup()
+    var popup = L.popup({closeButton: false})
       .setLatLng([e.location.y, e.location.x])
       .setContent(handleLocation(e.location.label, { lat: e.location.y, lng: e.location.x }))
       .openOn(map);

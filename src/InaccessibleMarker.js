@@ -6,7 +6,7 @@ const InaccessibleMarker= ({point}) => {
         position={[point.lat, point.lng]} 
         icon={InaccessibleIcon()}
     >
-        <Popup>
+        <Popup closeButton={false}>
             <h3>{point.name}</h3>
             <p>{point.description}</p>
         </Popup>

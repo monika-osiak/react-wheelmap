@@ -20,7 +20,7 @@ const FindMe = () => {
 
     return position === null ? null : (
       <Marker position={position} icon={FindMeIcon()}>
-        <Popup>
+        <Popup closeButton={false}>
           Tutaj jesteś. <br />
         </Popup>
       </Marker>
