@@ -6,7 +6,7 @@ import useFetch from './useFetch';
 import SearchField from './SearchField';
 
 const Map = () => {
-    const { error: errorPoints, loading: loadingPoints, data: points } = useFetch('http://localhost:8000/points')
+    const { error: errorPoints, loading: loadingPoints, data: points } = useFetch('https://new-fast-wheelmap.herokuapp.com/points/')
     const { error: errorPlaces, loading: loadingPlaces, data: places } = useFetch('http://localhost:8000/places')
 
     return ( 
