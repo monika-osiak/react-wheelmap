@@ -63,7 +63,7 @@ const AddPlace = () => {
         };
         setLoading(true);
         
-        fetch('http://localhost:8000/places', {
+        fetch('https://new-fast-wheelmap.herokuapp.com/places/', {
           method: 'POST',
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(place)

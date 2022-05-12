@@ -7,7 +7,7 @@ import SearchField from './SearchField';
 
 const Map = () => {
     const { error: errorPoints, loading: loadingPoints, data: points } = useFetch('https://new-fast-wheelmap.herokuapp.com/points/')
-    const { error: errorPlaces, loading: loadingPlaces, data: places } = useFetch('http://localhost:8000/places')
+    const { error: errorPlaces, loading: loadingPlaces, data: places } = useFetch('https://new-fast-wheelmap.herokuapp.com/places/')
 
     return ( 
         <MapContainer center={[52.246501, 21.085599]} zoom={15} scrollWheelZoom={false}>
