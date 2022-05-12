@@ -23,7 +23,7 @@ const AddPoint = () => {
         const point = { lat, lng, name, description, category };
         setLoading(true);
         
-        fetch('http://localhost:8000/points', {
+        fetch('https://new-fast-wheelmap.herokuapp.com/points/', {
           method: 'POST',
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(point)
