@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-wheelmap/static/css/main.a6d7399a.css",
-    "main.js": "/react-wheelmap/static/js/main.df321700.js",
+    "main.js": "/react-wheelmap/static/js/main.5d5bb4b1.js",
     "index.html": "/react-wheelmap/index.html",
     "main.a6d7399a.css.map": "/react-wheelmap/static/css/main.a6d7399a.css.map",
-    "main.df321700.js.map": "/react-wheelmap/static/js/main.df321700.js.map"
+    "main.5d5bb4b1.js.map": "/react-wheelmap/static/js/main.5d5bb4b1.js.map"
   },
   "entrypoints": [
     "static/css/main.a6d7399a.css",
-    "static/js/main.df321700.js"
+    "static/js/main.5d5bb4b1.js"
   ]
 }
