@@ -7,8 +7,14 @@ import SearchField from './SearchField';
 import FindMe from './FindMe';
 
 const Map = () => {
-    const { error: errorPoints, loading: loadingPoints, data: points } = useFetch('https://new-fast-wheelmap.herokuapp.com/points/')
-    const { error: errorPlaces, loading: loadingPlaces, data: places } = useFetch('https://new-fast-wheelmap.herokuapp.com/places/')
+    const points_url = 'https://new-fast-wheelmap.herokuapp.com/points/';
+    const points_url_local = 'http://127.0.0.1:8000/points/';
+
+    const places_url = 'https://new-fast-wheelmap.herokuapp.com/places/';
+    const places_url_local = 'http://127.0.0.1:8000/places/';
+
+    const { error: errorPoints, loading: loadingPoints, data: points } = useFetch(points_url);
+    const { error: errorPlaces, loading: loadingPlaces, data: places } = useFetch(places_url);
 
     return ( 
         <MapContainer center={[52.229902301977944, 21.01143836975098]} zoom={15} scrollWheelZoom={false}>
