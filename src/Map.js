@@ -17,7 +17,7 @@ const Map = () => {
     const { error: errorPlaces, loading: loadingPlaces, data: places } = useFetch(places_url);
 
     return ( 
-        <MapContainer center={[52.229902301977944, 21.01143836975098]} zoom={15} scrollWheelZoom={false}>
+        <MapContainer center={[52.229902301977944, 21.01143836975098]} zoom={13} scrollWheelZoom={false}>
             <FindMe/>
             <HandleClickOnMap/>
             <SearchField/>
