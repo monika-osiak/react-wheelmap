@@ -2,6 +2,17 @@ import { Marker, Popup} from "react-leaflet"
 import PlaceIcon from "./PlaceIcon";
 
 const PlaceMarker = ({ place }) => {
+    const places_url = 'https://new-fast-wheelmap.herokuapp.com/places/';
+    const places_url_local = 'http://127.0.0.1:8000/places/';
+
+    const handleClick = () => {
+        fetch(places_url + place.id, {
+            method: 'DELETE'
+        }).then(() => {
+            window.location.reload();
+        })
+    }
+
     return <Marker 
         position={[place.lat, place.lng]} 
         icon={PlaceIcon()}
@@ -20,6 +31,7 @@ const PlaceMarker = ({ place }) => {
             <p>{place.drzwiAkt ? "✅" : "❌"} Drzwi wystarczająco szerokie dla wózka aktywnego</p>
             <p>{place.drzwiElektr ? "✅" : "❌"} Drzwi wystarczająco szerokie dla wózka elektrycznego</p>
             <p>{place.rownyTeren ? "✅" : "❌"} Brak nierówności terenu</p>
+            <button onClick={handleClick}>Usuń lokalizację</button>
         </Popup>
     </Marker>
   }

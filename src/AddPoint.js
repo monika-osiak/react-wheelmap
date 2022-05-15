@@ -7,6 +7,9 @@ const AddPoint = () => {
     const lat = searchParams.get("lat");
     const lng = searchParams.get("lng");
 
+    const points_url = 'https://new-fast-wheelmap.herokuapp.com/points/';
+    const points_url_local = 'http://127.0.0.1:8000/points/';
+
     let url = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=" + lat+ "&lon=" + lng
     const { error, isPending, data: addressData } = useFetch(url)
 
@@ -23,7 +26,7 @@ const AddPoint = () => {
         const point = { lat, lng, name, description, category };
         setLoading(true);
         
-        fetch('https://new-fast-wheelmap.herokuapp.com/points/', {
+        fetch(points_url, {
           method: 'POST',
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(point)
