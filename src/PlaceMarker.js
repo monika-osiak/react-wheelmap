@@ -17,7 +17,7 @@ const PlaceMarker = ({ place }) => {
         position={[place.lat, place.lng]} 
         icon={PlaceIcon()}
     >
-        <Popup closeButton={false} maxHeight={400}>
+        <Popup closeButton={false} maxHeight={250}>
             <h3>{place.name}</h3>
             <p>{place.description}</p>
             <h4>Stopień dostosowania</h4>
