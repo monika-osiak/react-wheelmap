@@ -17,20 +17,20 @@ const PlaceMarker = ({ place }) => {
         position={[place.lat, place.lng]} 
         icon={PlaceIcon()}
     >
-        <Popup closeButton={false}>
+        <Popup closeButton={false} maxHeight={400}>
             <h3>{place.name}</h3>
             <p>{place.description}</p>
             <h4>Stopień dostosowania</h4>
-            <p>{place.toaletaAkt ? "✅" : "❌"} Toaleta przystosowana dla osób na wózkach aktywnych</p>
-            <p>{place.toaletaElektr ? "✅" : "❌"} Toaleta przystosowana dla osób na wózkach elektrycznych</p>
-            <p>{place.parking ? "✅" : "❌"} Parking dla osób z niepełnosprawnością</p>
-            <p>{place.winda ? "✅" : "❌"} Brak schodów lub winda</p>
-            <p>{place.brakProgow ? "✅" : "❌"} Brak progów</p>
-            <p>{place.swobodnyAkt ? "✅" : "❌"} Możliwość swodobnego poruszania się na wózku aktywnym</p>
-            <p>{place.swobodnyElektr ? "✅" : "❌"} Możliwość swodobnego poruszania się na wózku elektrycznym</p>
-            <p>{place.drzwiAkt ? "✅" : "❌"} Drzwi wystarczająco szerokie dla wózka aktywnego</p>
-            <p>{place.drzwiElektr ? "✅" : "❌"} Drzwi wystarczająco szerokie dla wózka elektrycznego</p>
-            <p>{place.rownyTeren ? "✅" : "❌"} Brak nierówności terenu</p>
+            <p>Czy toaleta jest przystosowana dla osób na wózkach aktywnych? {'\t'} {place.toaletaAkt ? "✅" : "❌"}</p>
+            <p>Czy toaleta jest przystosowana dla osób na wózkach elektrycznych? {place.toaletaElektr ? "✅" : "❌"}</p>
+            <p>Czy dostępne jest miejsce parkingowe dla osoby z niepełnosprawnością? {place.parking ? "✅" : "❌"}</p>
+            <p>Czy na miejscu nie ma schodów lub dostępna jest winda? {place.winda ? "✅" : "❌"}</p>
+            <p>Czy wejścia nie mają progów? {place.brakProgow ? "✅" : "❌"}</p>
+            <p>Czy główne funkcje tego miejsca są dostępne dla osoby na wózku aktywnym? {place.swobodnyAkt ? "✅" : "❌"}</p>
+            <p>Czy główne funkcje tego miejsca są dostępne dla osoby na wózku elektrycznym?{place.swobodnyElektr ? "✅" : "❌"}</p>
+            <p>Czy drzwi są wystarczająco szerokie dla wózka aktywnego? {place.drzwiAkt ? "✅" : "❌"}</p>
+            <p>Czy drzwi są wystarczająco szerokie dla wózka elektrycznego? {place.drzwiElektr ? "✅" : "❌"}</p>
+            <p>Czy teren jest pozbawiony nierówności? {place.rownyTeren ? "✅" : "❌"}</p>
             <button onClick={handleClick}>Usuń lokalizację</button>
         </Popup>
     </Marker>

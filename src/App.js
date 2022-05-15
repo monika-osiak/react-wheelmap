@@ -5,7 +5,6 @@ import './App.css';
 import Map from './Map';
 import Navbar from './Navbar';
 import NotFound from './NoFound';
-import AddLocation from './AddLocation';
 
 function App() {
 
@@ -18,7 +17,6 @@ function App() {
           <Route exact path="/react-wheelmap" element={<Map />} />
           <Route path="/points/" element={<AddPoint/>}/>
           <Route path="/places/" element={<AddPlace/>}/>
-          <Route path="/location" element={<AddLocation/>}/>
           <Route path="*" element={<NotFound />}/>
         </Switch>
       </div>

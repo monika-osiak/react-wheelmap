@@ -367,3 +367,22 @@ button {
 .leaflet-control-geosearch a.reset:hover {
   background: #f5f5f5;
 }
+
+.accessibility {
+  padding: 15px 0;
+}
+
+.accessibility label {
+  display: inline;
+}
+
+.accessibility div {
+  padding: 15px 0;
+  text-align: left;
+}
+
+.accessibility input {
+  display: inline;
+  margin-left: 10px;
+  width: auto;
+}

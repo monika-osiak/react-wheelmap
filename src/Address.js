@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import AddLocation from "./AddLocation";
 import useFetch from "./useFetch";
 
 const prettifyAddress = (data) => {

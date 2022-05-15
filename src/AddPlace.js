@@ -170,56 +170,78 @@ const AddPlace = () => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
-                <label>Toaleta przystosowana dla osób na wózkach aktywnych</label>
-                <input type="checkbox" 
-                    defaultChecked={toaletaAkt}
-                    onChange={(e) => setToaletaAkt(!toaletaAkt)}
-                />
-                <label>Toaleta przystosowana dla osób na wózkach elektrycznych</label>
-                <input type="checkbox" 
-                    defaultChecked={toaletaElektr}
-                    onChange={(e) => setToaletaElektr(!toaletaElektr)}
-                />
-                <label>Parking dla osób z niepełnosprawnością</label>
-                <input type="checkbox" 
-                    defaultChecked={parking}
-                    onChange={(e) => setParking(!parking)}
-                />
-                <label>Brak schodów lub winda</label>
-                <input type="checkbox" 
-                    defaultChecked={winda}
-                    onChange={(e) => setWinda(!winda)}
-                />
-                <label>Brak progów</label>
-                <input type="checkbox" 
-                    defaultChecked={brakProgow}
-                    onChange={(e) => setBrakProgow(!brakProgow)}
-                />
-                <label>Możliwość swodobnego poruszania się na wózku aktywnym</label>
-                <input type="checkbox" 
-                    defaultChecked={swobodnyAkt}
-                    onChange={(e) => setSwobodnyAkt(!swobodnyAkt)}
-                />
-                <label>Możliwość swodobnego poruszania się na wózku elektrycznym</label>
-                <input type="checkbox" 
-                    defaultChecked={swobodnyElektr}
-                    onChange={(e) => setSwobodnyElektr(!swobodnyElektr)}
-                />
-                <label>Drzwi wystarczająco szerokie dla wózka aktywnego</label>
-                <input type="checkbox" 
-                    defaultChecked={drzwiAkt}
-                    onChange={(e) => setDrzwiAkt(!drzwiAkt)}
-                />
-                <label>Drzwi wystarczająco szerokie dla wózka elektrycznego</label>
-                <input type="checkbox" 
-                    defaultChecked={drzwiElektr}
-                    onChange={(e) => setDrzwiElektr(!drzwiElektr)}
-                />
-                <label>Brak nierówności terenu</label>
-                <input type="checkbox" 
-                    defaultChecked={rownyTeren}
-                    onChange={(e) => setRownyTeren(!rownyTeren)}
-                />
+                <div className="accessibility">
+                    <div>
+                        <label>Czy toaleta jest przystosowana dla osób na wózkach aktywnych?</label>
+                        <input type="checkbox" 
+                            defaultChecked={toaletaAkt}
+                            onChange={(e) => setToaletaAkt(!toaletaAkt)}
+                        />
+                    </div>
+                    <div>
+                        <label>Czy toaleta jest przystosowana dla osób na wózkach elektrycznych?</label>
+                        <input type="checkbox" 
+                            defaultChecked={toaletaElektr}
+                            onChange={(e) => setToaletaElektr(!toaletaElektr)}
+                        />
+                    </div>
+                    <div>
+                        <label>Czy dostępne jest miejsce parkingowe dla osoby z niepełnosprawnością?</label>
+                        <input type="checkbox" 
+                            defaultChecked={parking}
+                            onChange={(e) => setParking(!parking)}
+                        />
+                    </div>
+                    <div>
+                        <label>Czy na miejscu nie ma schodów lub dostępna jest winda?</label>
+                        <input type="checkbox" 
+                            defaultChecked={winda}
+                            onChange={(e) => setWinda(!winda)}
+                        />
+                    </div>
+                    <div>
+                        <label>Czy wejścia nie mają progów?</label>
+                        <input type="checkbox" 
+                            defaultChecked={brakProgow}
+                            onChange={(e) => setBrakProgow(!brakProgow)}
+                        />
+                    </div>
+                    <div>
+                        <label>Czy główne funkcje tego miejsca są dostępne dla osoby na wózku aktywnym?</label>
+                        <input type="checkbox" 
+                            defaultChecked={swobodnyAkt}
+                            onChange={(e) => setSwobodnyAkt(!swobodnyAkt)}
+                        />
+                    </div>
+                    <div>
+                        <label>Czy główne funkcje tego miejsca są dostępne dla osoby na wózku elektrycznym?</label>
+                        <input type="checkbox" 
+                            defaultChecked={swobodnyElektr}
+                            onChange={(e) => setSwobodnyElektr(!swobodnyElektr)}
+                        />
+                    </div>
+                    <div>
+                        <label>Czy drzwi są wystarczająco szerokie dla wózka aktywnego?</label>
+                        <input type="checkbox" 
+                            defaultChecked={drzwiAkt}
+                            onChange={(e) => setDrzwiAkt(!drzwiAkt)}
+                        />
+                    </div>
+                    <div>
+                        <label>Czy drzwi są wystarczająco szerokie dla wózka elektrycznego?</label>
+                        <input type="checkbox" 
+                            defaultChecked={drzwiElektr}
+                            onChange={(e) => setDrzwiElektr(!drzwiElektr)}
+                        />
+                    </div>
+                    <div>
+                        <label>Czy teren jest pozbawiony nierówności?</label>
+                        <input type="checkbox" 
+                            defaultChecked={rownyTeren}
+                            onChange={(e) => setRownyTeren(!rownyTeren)}
+                        />
+                    </div>
+                </div>
                 { !loading && <button onClick={setAddress}>Dodaj miejsce</button>}
                 { loading && <button disabled>Dodawanie miejsca...</button>}
             </form>}
