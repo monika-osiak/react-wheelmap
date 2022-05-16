@@ -29,7 +29,7 @@ const SearchField = () => {
     maxSuggestions: 5,
     keepResult: false,
     resultFormat: ({ result }) => {
-      const maxLength = 30;
+      const maxLength = 40;
       if (result.label.length <= maxLength) {
         return result.label;
       } else {
