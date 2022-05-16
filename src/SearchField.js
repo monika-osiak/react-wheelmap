@@ -8,8 +8,8 @@ const SearchField = () => {
   const handleLocation = (label, position) => {
     return `<div className="location">
       <p>${label}</p>
-      <a href=#/points?lat=${position.lat}&lng=${position.lng}><button>Dodaj punkt</button><a>
-      <a href=#/places?lat=${position.lat}&lng=${position.lng}><button>Dodaj miejsce</button><a>
+      <a href=#/points?lat=${position.lat}&lng=${position.lng}><button style="background-color:red">Dodaj punkt niedostępny</button><a>
+      <a href=#/places?lat=${position.lat}&lng=${position.lng}><button style="background-color:gold;color:black">Oceń dostępność miejsca</button><a>
     </div>`
   }
   const searchControl = new GeoSearchControl({
@@ -42,7 +42,7 @@ const SearchField = () => {
   const map = useMap();
   const yourEventHandler = (e) => {
     console.log(e.location);
-    var popup = L.popup({closeButton: false})
+    var popup = L.popup({closeButton: false, maxWidth: 200})
       .setLatLng([e.location.y, e.location.x])
       .setContent(handleLocation(e.location.label, { lat: e.location.y, lng: e.location.x }))
       .openOn(map);

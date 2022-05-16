@@ -14,10 +14,10 @@ function HandleClickOnMap() {
   
     return position === null ? null : (
       <Marker position={position}>
-        <Popup closeButton={false}>
+        <Popup closeButton={false} maxWidth={200}>
             <Address position={position}/>
-            <Link to={`/points?lat=${position.lat}&lng=${position.lng}`}><button>Dodaj punkt</button></Link>
-            <Link to={`/places?lat=${position.lat}&lng=${position.lng}`}><button>Dodaj miejsce</button></Link>
+            <Link to={`/points?lat=${position.lat}&lng=${position.lng}`}><button style={{backgroundColor: 'red'}}>Dodaj punkt niedostępny</button></Link>
+            <Link to={`/places?lat=${position.lat}&lng=${position.lng}`}><button style={{backgroundColor: 'gold', color: 'black'}}>Oceń dostępność miejsca</button></Link>
         </Popup>
       </Marker>
     )
