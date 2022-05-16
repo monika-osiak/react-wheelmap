@@ -28,8 +28,13 @@ const SearchField = () => {
     retainZoomLevel: true,
     maxSuggestions: 5,
     keepResult: false,
-    resultFormat: function(t) {
-      return "" + t.result.label;
+    resultFormat: ({ result }) => {
+      const maxLength = 60;
+      if (result.label.length <= maxLength) {
+        return result.label;
+      } else {
+        return result.label.substring(0, maxLength) + '...';
+      }
     },
     updateMap: !0
   });
