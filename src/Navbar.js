@@ -5,8 +5,8 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>Wheelmap 2.0</h1>
       <div className="links">
-        <Link to="/">Mapa</Link>
-        <Link to="/about">O aplikacji</Link>
+        <p><Link to="/">Mapa</Link></p>
+        <p><Link to="/about">O aplikacji</Link></p>
       </div>
     </nav>
   );

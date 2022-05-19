@@ -40,6 +40,7 @@ code {
 }
 .navbar .links {
   margin-left: auto;
+  text-align: right;
 }
 .navbar a {
   margin-left: 16px;
