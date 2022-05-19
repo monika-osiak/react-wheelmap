@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const About = () => {
     return (
         <div className="about">
-            <h2>React Wheelmap</h2>
+            <h2>Wheelmap 2.0</h2>
             <p>Celem aplikacji jest umożliwienie zaznaczania miejsc niedostępnych w mieście, np. kładka bez windy, remont chodnika, niedziałająca winda, aby ostrzec innych.</p>
             <p>Aplikacja umożliwia również ocenę dostępności danej lokalizacji, np. urzędu czy restauracji.</p>
             <div className="pins">
