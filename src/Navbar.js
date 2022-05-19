@@ -5,7 +5,8 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>React Wheelmap</h1>
       <div className="links">
-        <Link to="/">Widok główny</Link>
+        <Link to="/">Mapa</Link>
+        <Link to="/about">O aplikacji</Link>
       </div>
     </nav>
   );

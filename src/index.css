@@ -386,3 +386,31 @@ button {
   margin-left: 10px;
   width: auto;
 }
+
+.about {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 40px;
+  padding-top: 40px;
+}
+
+.about p {
+  margin: 20px 0;
+}
+
+.pins {
+  margin: 40px 0;
+}
+
+.pin {
+  margin: 20px 0;
+}
+
+.pin p {
+  display: inline;
+}
+
+.pin img {
+  margin: 0 10px;
+}

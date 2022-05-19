@@ -5,6 +5,7 @@ import './App.css';
 import Map from './Map';
 import Navbar from './Navbar';
 import NotFound from './NoFound';
+import About from './About';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path="" element={<Map />} />
           <Route exact path="/react-wheelmap" element={<Map />} />
+          <Route path="/about/" element={<About/>} />
           <Route path="/points/" element={<AddPoint/>}/>
           <Route path="/places/" element={<AddPlace/>}/>
           <Route path="*" element={<NotFound />}/>
